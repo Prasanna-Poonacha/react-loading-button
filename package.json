@@ -1,6 +1,6 @@
 {
   "name": "prassi-react-loading-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react-loading-button React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -10,6 +10,9 @@
     "lib",
     "umd"
   ],
+  "repository":{
+    "src":"https://github.com/Prasanna-Poonacha/react-loading-button.git"
+  },
   "scripts": {
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
@@ -31,7 +34,6 @@
   "author": "",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
   "keywords": [
     "react-component"
   ]
