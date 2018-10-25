@@ -1,9 +1,26 @@
+import t from 'prop-types'
 import React, {Component} from 'react'
 
-export default class extends Component {
+class LoadingButton extends Component {
+  static propTypes = {
+    disabled: t.bool,
+    loading: t.bool,
+    type: t.string,
+  }
+  static defaultProps = {
+    disabled: false,
+    loading: false,
+    type: 'button',
+  }
   render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
+    let {children, disabled, loading, type, ...props} = this.props
+    if (loading) {
+      disabled = true
+    }
+    return <button disabled={disabled} type={type} {...props}>
+      {children}
+    </button>
   }
 }
+
+export default LoadingButton
